@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{65551e20-8d11-481d-84dc-b273c142392f}">
+		<property name="assetPath">
+			<value>The_Planets_Mars.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>145.2930612244898</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{afa35e74-ce60-4ab8-8ef1-01adfab15de6}</destination>
+		</relationship>
+	</object>
+</objects>

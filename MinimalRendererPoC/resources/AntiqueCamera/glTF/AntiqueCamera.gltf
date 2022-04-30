@@ -1,0 +1,417 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.3.48",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_lights_punctual"
+    ],
+    "extensionsRequired" : [
+        "KHR_lights_punctual"
+    ],
+    "extensions" : {
+        "KHR_lights_punctual" : {
+            "lights" : [
+                {
+                    "color" : [
+                        1,
+                        1,
+                        1
+                    ],
+                    "intensity" : 1000,
+                    "type" : "directional",
+                    "name" : "Light"
+                }
+            ]
+        }
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0,
+                1,
+                3,
+                5
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "camera",
+            "rotation" : [
+                0,
+                -0.7071068286895752,
+                0,
+                0.7071067690849304
+            ],
+            "scale" : [
+                0.5700311064720154,
+                0.5700311064720154,
+                0.5700311064720154
+            ]
+        },
+        {
+            "mesh" : 1,
+            "name" : "tripod",
+            "rotation" : [
+                0,
+                -0.7071068286895752,
+                0,
+                0.7071067690849304
+            ],
+            "scale" : [
+                0.5700311064720154,
+                0.5700311064720154,
+                0.5700311064720154
+            ]
+        },
+        {
+            "extensions" : {
+                "KHR_lights_punctual" : {
+                    "light" : 0
+                }
+            },
+            "name" : "Light_Orientation",
+            "rotation" : [
+                -0.7071067690849304,
+                0,
+                0,
+                0.7071067690849304
+            ]
+        },
+        {
+            "children" : [
+                2
+            ],
+            "name" : "Light",
+            "rotation" : [
+                0.16907575726509094,
+                0.7558803558349609,
+                -0.27217137813568115,
+                0.570947527885437
+            ],
+            "translation" : [
+                6.843644142150879,
+                18.121944427490234,
+                -27.281742095947266
+            ]
+        },
+        {
+            "camera" : 0,
+            "name" : "Camera_Orientation",
+            "rotation" : [
+                -0.7071067690849304,
+                0,
+                0,
+                0.7071067690849304
+            ]
+        },
+        {
+            "children" : [
+                4
+            ],
+            "name" : "Camera",
+            "rotation" : [
+                0.483536034822464,
+                0.33687159419059753,
+                -0.20870360732078552,
+                0.7804827094078064
+            ],
+            "scale" : [
+                3.3252651691436768,
+                3.0105385780334473,
+                1.7303308248519897
+            ],
+            "translation" : [
+                11.144329071044922,
+                11.777995109558105,
+                10.494016647338867
+            ]
+        }
+    ],
+    "cameras" : [
+        {
+            "name" : "Camera",
+            "perspective" : {
+                "aspectRatio" : 1.7777777777777777,
+                "yfov" : 0.39959652046304894,
+                "zfar" : 100,
+                "znear" : 0.10000000149011612
+            },
+            "type" : "perspective"
+        }
+    ],
+    "materials" : [
+        {
+            "emissiveFactor" : [
+                0,
+                0,
+                0
+            ],
+            "name" : "camera",
+            "normalTexture" : {
+                "index" : 0,
+                "texCoord" : 0
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 1,
+                    "texCoord" : 0
+                },
+                "metallicRoughnessTexture" : {
+                    "index" : 2,
+                    "texCoord" : 0
+                }
+            }
+        },
+        {
+            "emissiveFactor" : [
+                0,
+                0,
+                0
+            ],
+            "name" : "tripod",
+            "normalTexture" : {
+                "index" : 3,
+                "texCoord" : 0
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 4,
+                    "texCoord" : 0
+                },
+                "metallicRoughnessTexture" : {
+                    "index" : 5,
+                    "texCoord" : 0
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "camera_uv",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TANGENT" : 2,
+                        "TEXCOORD_0" : 3
+                    },
+                    "indices" : 4,
+                    "material" : 0
+                }
+            ]
+        },
+        {
+            "name" : "tripod_uv",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 5,
+                        "NORMAL" : 6,
+                        "TANGENT" : 7,
+                        "TEXCOORD_0" : 8
+                    },
+                    "indices" : 9,
+                    "material" : 1
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0
+        },
+        {
+            "source" : 1
+        },
+        {
+            "source" : 2
+        },
+        {
+            "source" : 3
+        },
+        {
+            "source" : 4
+        },
+        {
+            "source" : 5
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "name" : "camera_camera_Normal",
+            "uri" : "camera_camera_Normal.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "camera_camera_BaseColor",
+            "uri" : "camera_camera_BaseColor.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "camera_camera_Roughness",
+            "uri" : "camera_camera_Roughness.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "camera_tripod_Normal",
+            "uri" : "camera_tripod_Normal.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "camera_tripod_BaseColor",
+            "uri" : "camera_tripod_BaseColor.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "camera_tripod_Roughness",
+            "uri" : "camera_tripod_Roughness.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 17250,
+            "max" : [
+                1.8916611671447754,
+                12.645012855529785,
+                1.2003434896469116
+            ],
+            "min" : [
+                -1.8916611671447754,
+                9.395228385925293,
+                -1.200343370437622
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 17250,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 17250,
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 17250,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5123,
+            "count" : 41838,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 7401,
+            "max" : [
+                2.6307950019836426,
+                9.506563186645508,
+                2.852458953857422
+            ],
+            "min" : [
+                -3.324300527572632,
+                -0.0014147758483886719,
+                -1.7042126655578613
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 7401,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5126,
+            "count" : 7401,
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 8,
+            "componentType" : 5126,
+            "count" : 7401,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 9,
+            "componentType" : 5123,
+            "count" : 18360,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 207000,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 207000,
+            "byteOffset" : 207000
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 276000,
+            "byteOffset" : 414000
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 138000,
+            "byteOffset" : 690000
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 83676,
+            "byteOffset" : 828000
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 88812,
+            "byteOffset" : 911676
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 88812,
+            "byteOffset" : 1000488
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 118416,
+            "byteOffset" : 1089300
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 59208,
+            "byteOffset" : 1207716
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 36720,
+            "byteOffset" : 1266924
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 1303644,
+            "uri" : "AntiqueCamera.bin"
+        }
+    ]
+}

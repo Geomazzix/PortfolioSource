@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{8f6b40a1-b35f-45a6-8d00-97a43d3f0652}">
+		<property name="assetPath">
+			<value>ROBOTIC_Transformation_Insect_03_Servos_stereo.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.8388208616780046</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{afa35e74-ce60-4ab8-8ef1-01adfab15de6}</destination>
+		</relationship>
+	</object>
+</objects>

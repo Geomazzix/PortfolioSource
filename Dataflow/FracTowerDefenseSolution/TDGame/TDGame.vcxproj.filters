@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\TDpch.cpp" />
+    <ClCompile Include="src\TDGame.cpp" />
+    <ClCompile Include="src\GameDirector.cpp" />
+    <ClCompile Include="src\CameraSystem.cpp" />
+    <ClCompile Include="src\CursorSystem.cpp" />
+    <ClCompile Include="src\EnemyDirectorSystem.cpp" />
+    <ClCompile Include="src\EnemyEntityCreator.cpp" />
+    <ClCompile Include="src\IEntityCreator.cpp" />
+    <ClCompile Include="src\LevelEntityCreator.cpp" />
+    <ClCompile Include="src\PlayerEntityCreator.cpp" />
+    <ClCompile Include="src\PlayerManagerSystem.cpp" />
+    <ClCompile Include="src\TileManager.cpp" />
+    <ClCompile Include="src\HealthSystem.cpp" />
+    <ClCompile Include="src\LevelManager.cpp" />
+    <ClCompile Include="src\OgmoParser.cpp" />
+    <ClCompile Include="src\Canvases\CanvasSystem.cpp" />
+    <ClCompile Include="src\Canvases\GameplayCanvasSystem.cpp" />
+    <ClCompile Include="src\Canvases\MainMenuCanvasSystem.cpp" />
+    <ClCompile Include="src\Canvases\PauseCanvasSystem.cpp" />
+    <ClCompile Include="src\Canvases\VictoryCanvasSystem.cpp" />
+    <ClCompile Include="src\Canvases\DefeatCanvasSystem.cpp" />
+    <ClCompile Include="src\BulletSystem.cpp" />
+    <ClCompile Include="src\TurretSystem.cpp" />
+    <ClCompile Include="src\UtilityTD.cpp" />
+    <ClCompile Include="src\Canvases\LoadCanvasSystem.cpp" />
+    <ClCompile Include="src\Canvases\DeveloperCanvasSystem.cpp" />
+    <ClCompile Include="src\Canvases\OptionsCanvasSystem.cpp" />
+    <ClCompile Include="src\Canvases\CreditsCanvasSystem.cpp" />
+    <ClCompile Include="src\Tools\Version.cpp" />
+    <ClCompile Include="src\DeathAnimationSystem.cpp" />
+    <ClCompile Include="src\SpawnAnimationSystem.cpp" />
+    <ClCompile Include="src\Canvases\NextLevelCanvasSystem.cpp" />
+    <ClCompile Include="src\TutorialSystem.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Game.h" />
+    <ClInclude Include="include\TDpch.h" />
+    <ClInclude Include="include\GameDirector.h" />
+    <ClInclude Include="include\CameraSystem.h" />
+    <ClInclude Include="include\Components.h" />
+    <ClInclude Include="include\CursorSystem.h" />
+    <ClInclude Include="include\EnemyDirectorSystem.h" />
+    <ClInclude Include="include\EnemyEntityCreator.h" />
+    <ClInclude Include="include\HealthSystem.h" />
+    <ClInclude Include="include\IEntityCreator.h" />
+    <ClInclude Include="include\LevelData.h" />
+    <ClInclude Include="include\LevelEntityCreator.h" />
+    <ClInclude Include="include\PlayerEntityCreator.h" />
+    <ClInclude Include="include\PlayerManagerSystem.h" />
+    <ClInclude Include="include\TileManager.h" />
+    <ClInclude Include="include\LevelManager.h" />
+    <ClInclude Include="include\OgmoParser.h" />
+    <ClInclude Include="include\StaticLevelObjects.h" />
+    <ClInclude Include="include\StaticLevelInteractable.h" />
+    <ClInclude Include="include\Canvases\CanvasSystem.h" />
+    <ClInclude Include="include\Canvases\CanvasComponents.h" />
+    <ClInclude Include="include\Canvases\GameplayCanvasSystem.h" />
+    <ClInclude Include="include\Canvases\MainMenuCanvasSystem.h" />
+    <ClInclude Include="include\Canvases\PauseCanvasSystem.h" />
+    <ClInclude Include="include\Canvases\VictoryCanvasSystem.h" />
+    <ClInclude Include="include\Canvases\DefeatCanvasSystem.h" />
+    <ClInclude Include="include\BulletSystem.h" />
+    <ClInclude Include="include\TurretSystem.h" />
+    <ClInclude Include="include\UtilityTD.h" />
+    <ClInclude Include="include\Canvases\LoadCanvasSystem.h" />
+    <ClInclude Include="include\Canvases\DeveloperCanvasSystem.h" />
+    <ClInclude Include="include\Canvases\OptionsCanvasSystem.h" />
+    <ClInclude Include="include\Canvases\CreditsCanvasSystem.h" />
+    <ClInclude Include="include\GameSettings.h" />
+    <ClInclude Include="include\Tools\Version.h" />
+    <ClInclude Include="include\DeathAnimationSystem.h" />
+    <ClInclude Include="include\SpawnAnimationSystem.h" />
+    <ClInclude Include="include\Canvases\NextLevelCanvasSystem.h" />
+    <ClInclude Include="include\TutorialSystem.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="NintendoSDKFiles\Application.arm.ilp32.nmeta" />
+    <CustomBuild Include="NintendoSDKFiles\Application.aarch64.lp64.nmeta" />
+    <CustomBuild Include="NintendoSDKFiles\NintendoSDK_Application.bmp" />
+  </ItemGroup>
+</Project>

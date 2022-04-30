@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F59D376E-A691-4319-8AA7-60920FF56DCB}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(DebuggerFlavor)'=='ORBISDebugger'" Label="OverrideDebuggerDefaults">
+    <!--LocalDebuggerCommand>$(TargetPath)</LocalDebuggerCommand-->
+    <!--LocalDebuggerCommandArguments></LocalDebuggerCommandArguments-->
+    <!--LocalDebuggerTarget></LocalDebuggerTarget-->
+    <!--LocalDebuggerWorkingDirectory>$(ProjectDir)</LocalDebuggerWorkingDirectory-->
+    <!--LocalRunCommandLine></LocalRunCommandLine-->
+  </PropertyGroup>
+  <ImportGroup Label="ExtensionSettings">
+    <Import Condition="Exists('$(VCTargetsPath)\BuildCustomizations\OrbisWavePsslc.props')" Project="$(VCTargetsPath)\BuildCustomizations\OrbisWavePsslc.props" />
+    <Import Condition="Exists('$(VCTargetsPath)\BuildCustomizations\SCU.props')" Project="$(VCTargetsPath)\BuildCustomizations\SCU.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="..\PropertySheets\Win64Props.props" />
+    <Import Project="..\PropertySheets\TowerDefensePS4Props.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="..\PropertySheets\Win64Props.props" />
+    <Import Project="..\PropertySheets\TowerDefensePS4Props.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)Thorium\include;$(SolutionDir)nlohman;$(SolutionDir)Projects\Thorium\include\Memory;$(SolutionDir)Projects\Thorium\deps\signals;$(SolutionDir)Projects\Thorium\deps\spdlog\include;$(SolutionDir)Projects\Thorium\deps\FMOD\Windows\core\inc\;$(SolutionDir)Projects\Thorium\deps\FMOD\Windows\studio\inc\;$(SolutionDir)Projects\Thorium\deps\FMOD\Windows\fsbank\inc\;$(SolutionDir)Projects\Thorium\deps\glm</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(SolutionDir)Thorium\include;$(IncludePath);$(SolutionDir)Thorium\include\Memory;$(SolutionDir)Projects\Thorium\deps\signals;$(SolutionDir)Projects\Thorium\deps\FMOD\Windows\core\inc\;$(SolutionDir)Projects\Thorium\deps\FMOD\Windows\studio\inc\;$(SolutionDir)Projects\Thorium\deps\FMOD\Windows\fsbank\inc\;$(SolutionDir)Projects\Thorium\deps\glm\;$(SolutionDir)Projects\Thorium\deps\spdlog\include</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <Optimization>
+      </Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Projects\Thorium\deps\FMOD\Windows\core\inc\;$(SolutionDir)Projects\Thorium\deps\FMOD\Windows\studio\inc\;$(SolutionDir)Projects\Thorium\deps\FMOD\Windows\fsbank\inc\;%(AdditionalIncludeDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link />
+    <PostBuildEvent>
+      <Command>if not exist "$(OutDir)Shaders" mkdir "$(OutDir)res\shaders"
+move "$(OutDir)*.cso" "$(OutDir)res\shaders"
+
+
+copy "$(WindowsSdkDir_10)Redist\D3D\$(platform)\d3dcompiler_47.dll" "$(OutDir)"
+copy "$(SolutionDir)Projects\Thorium\deps\FMOD\Windows\core\lib\x64\fmodL.dll" "$(OutDir)"
+copy "$(SolutionDir)Projects\Thorium\deps\FMOD\Windows\studio\lib\x64\fmodstudioL.dll" "$(OutDir)"
+
+call $(SolutionDir)..\BuildScripts\CopyFolder.cmd "$(OutDir)res\audio\" "$(ProjectDir)Res\Audio"
+call $(SolutionDir)..\BuildScripts\CopyFolder.cmd "$(OutDir)res\levels\" "$(ProjectDir)Res\Levels"
+call $(SolutionDir)..\BuildScripts\CopyFolder.cmd "$(OutDir)res\models\" "$(ProjectDir)Res\models"
+</Command>
+    </PostBuildEvent>
+    <FxCompile>
+      <ShaderModel>5.1</ShaderModel>
+      <DisableOptimizations>true</DisableOptimizations>
+      <EnableDebuggingInformation>true</EnableDebuggingInformation>
+    </FxCompile>
+    <Link>
+      <AdditionalDependencies>fmodstudioL_vc.lib;fmodL_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Projects\Thorium\deps\FMOD\Windows\core\lib\x64\;$(SolutionDir)Projects\Thorium\deps\FMOD\Windows\studio\lib\x64\</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <Optimization />
+      <AdditionalIncludeDirectories>$(SolutionDir)Projects\Thorium\deps\FMOD\Windows\core\inc\;$(SolutionDir)Projects\Thorium\deps\FMOD\Windows\studio\inc\;$(SolutionDir)Projects\Thorium\deps\FMOD\Windows\fsbank\inc\;;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>if not exist "$(OutDir)Shaders" mkdir "$(OutDir)res\shaders"
+move "$(OutDir)*.cso" "$(OutDir)res\shaders"
+
+
+copy "$(WindowsSdkDir_10)Redist\D3D\$(platform)\d3dcompiler_47.dll" "$(OutDir)"
+copy "$(SolutionDir)Projects\Thorium\deps\FMOD\Windows\core\lib\x64\fmod.dll" "$(OutDir)"
+copy "$(SolutionDir)Projects\Thorium\deps\FMOD\Windows\studio\lib\x64\fmodstudio.dll" "$(OutDir)"
+
+
+call $(SolutionDir)..\BuildScripts\CopyFolder.cmd "$(OutDir)res\audio\" "$(ProjectDir)Res\Audio"
+call $(SolutionDir)..\BuildScripts\CopyFolder.cmd "$(OutDir)res\levels\" "$(ProjectDir)Res\Levels"
+call $(SolutionDir)..\BuildScripts\CopyFolder.cmd "$(OutDir)res\models\" "$(ProjectDir)Res\models"</Command>
+    </PostBuildEvent>
+    <FxCompile>
+      <ShaderModel>5.1</ShaderModel>
+    </FxCompile>
+    <Link />
+    <Link />
+    <Link>
+      <AdditionalDependencies>fmodstudio_vc.lib;fmod_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Projects\Thorium\deps\FMOD\Windows\core\lib\x64\;$(SolutionDir)Projects\Thorium\deps\FMOD\Windows\studio\lib\x64\</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Thorium\Thorium.vcxproj">
+      <Project>{4f6dfe8f-4b7c-4f9a-a17d-d7f83b611028}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Include\CameraSystem.h" />
+    <ClInclude Include="Include\EnemyComponent.h" />
+    <ClInclude Include="Include\EnemySystem.h" />
+    <ClInclude Include="Include\Heap.h" />
+    <ClInclude Include="Include\IMapParser.h" />
+    <ClInclude Include="Include\InteractAbleComponent.h" />
+    <ClInclude Include="Include\JsonParser.h" />
+    <ClInclude Include="Include\LevelManager.h" />
+    <ClInclude Include="Include\PathFindingComponent.h" />
+    <ClInclude Include="Include\pch.h" />
+    <ClInclude Include="Include\PlayerSystem.h" />
+    <ClInclude Include="Include\ProjectileComponent.h" />
+    <ClInclude Include="Include\ProjectileSystem.h" />
+    <ClInclude Include="Include\Ray.h" />
+    <ClInclude Include="Include\TBRGame.h" />
+    <ClInclude Include="Include\Tile.h" />
+    <ClInclude Include="Include\TileMap.h" />
+    <ClInclude Include="Include\TowerComponent.h" />
+    <ClInclude Include="Include\TowerSystem.h" />
+    <ClInclude Include="Include\WaveSystem.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\CameraSystem.cpp" />
+    <ClCompile Include="Src\EnemyComponent.cpp" />
+    <ClCompile Include="Src\EnemySystem.cpp" />
+    <ClCompile Include="Src\Heap.cpp" />
+    <ClCompile Include="Src\IMapParser.cpp" />
+    <ClCompile Include="Src\JsonParser.cpp" />
+    <ClCompile Include="Src\LevelManager.cpp" />
+    <ClCompile Include="Src\PathFindingComponent.cpp" />
+    <ClCompile Include="Src\pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Src\PlayerSystem.cpp" />
+    <ClCompile Include="Src\ProjectileComponent.cpp" />
+    <ClCompile Include="Src\ProjectileSystem.cpp" />
+    <ClCompile Include="Src\Ray.cpp" />
+    <ClCompile Include="Src\TBRGame.cpp" />
+    <ClCompile Include="Src\Tile.cpp" />
+    <ClCompile Include="Src\InteractAbleComponent.cpp" />
+    <ClCompile Include="Src\TileMap.cpp" />
+    <ClCompile Include="Src\TowerComponent.cpp" />
+    <ClCompile Include="Src\TowerSystem.cpp" />
+    <ClCompile Include="Src\WaveSystem.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Res\Shaders\HLSL\FS\TriangleShader.frag.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Res\Shaders\HLSL\VS\TriangleShader.vert.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+    </FxCompile>
+  </ItemGroup>
+  <Import Condition="'$(ConfigurationType)' == 'Makefile' and Exists('$(VCTargetsPath)\Platforms\$(Platform)\SCE.Makefile.$(Platform).targets')" Project="$(VCTargetsPath)\Platforms\$(Platform)\SCE.Makefile.$(Platform).targets" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Condition="Exists('$(VCTargetsPath)\BuildCustomizations\OrbisWavePsslc.targets')" Project="$(VCTargetsPath)\BuildCustomizations\OrbisWavePsslc.targets" />
+    <Import Condition="Exists('$(VCTargetsPath)\BuildCustomizations\SCU.targets')" Project="$(VCTargetsPath)\BuildCustomizations\SCU.targets" />
+  </ImportGroup>
+</Project>

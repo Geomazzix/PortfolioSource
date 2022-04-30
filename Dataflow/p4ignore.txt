@@ -1,0 +1,4 @@
+bin
+Intermediate
+*.vcxproj.user
+.vs

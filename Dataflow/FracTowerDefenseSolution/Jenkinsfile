@@ -1,0 +1,41 @@
+pipeline 
+{
+	agent any
+	stages 
+	{
+        stage('Build Debug x64') 
+		{
+            steps 
+			{
+				bat '"C:\\Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/amd64/msbuild.exe" FracEngine.sln /t:build /p:Configuration=Debug;Platform=x64'
+            }
+        }
+		
+		stage('Build Develop x64') 
+		{
+            steps 
+			{
+				bat '"C:\\Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/amd64/msbuild.exe" FracEngine.sln /t:build /p:Configuration=Develop;Platform=x64'
+            }
+        }
+		
+		stage('Build Release x64') 
+		{
+            steps 
+			{
+				bat '"C:\\Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/amd64/msbuild.exe" FracEngine.sln /t:build /p:Configuration=Release;Platform=x64'
+            }
+        }
+		
+		stage('static code analysis')
+		{
+			steps
+			{
+				bat 'IF EXIST cppcheck.xml (del cppcheck.xml)'
+				bat '"C:\\Program Files/Cppcheck/cppcheck" --xml-version=2 --enable=all --inconclusive --project=FracEngine.cppcheck 2>cppcheck.xml'
+				publishCppcheck pattern:'cppcheck.xml'
+				bat 'python Externals/cpplint/cpplint.py --recursive --filter=-whitespace FracEngine'
+			}
+		}																								
+    }
+}

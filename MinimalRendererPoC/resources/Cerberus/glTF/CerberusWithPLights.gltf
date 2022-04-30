@@ -1,0 +1,470 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.3.48",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_lights_punctual"
+    ],
+    "extensionsRequired" : [
+        "KHR_lights_punctual"
+    ],
+    "extensions" : {
+        "KHR_lights_punctual" : {
+            "lights" : [
+                {
+                    "color" : [
+                        1,
+                        1,
+                        1
+                    ],
+                    "intensity" : 1,
+                    "type" : "directional",
+                    "name" : "Sun"
+                },
+                {
+                    "color" : [
+                        1,
+                        1,
+                        1
+                    ],
+                    "intensity" : 10,
+                    "type" : "point",
+                    "name" : "Point"
+                },
+                {
+                    "color" : [
+                        1,
+                        1,
+                        1
+                    ],
+                    "intensity" : 10,
+                    "type" : "point",
+                    "name" : "Point.001"
+                },
+                {
+                    "color" : [
+                        1,
+                        1,
+                        1
+                    ],
+                    "intensity" : 10,
+                    "type" : "point",
+                    "name" : "Point.002"
+                },
+                {
+                    "color" : [
+                        1,
+                        1,
+                        1
+                    ],
+                    "intensity" : 10,
+                    "type" : "point",
+                    "name" : "Point.003"
+                },
+                {
+                    "color" : [
+                        1,
+                        1,
+                        1
+                    ],
+                    "intensity" : 10,
+                    "type" : "point",
+                    "name" : "Point.004"
+                }
+            ]
+        }
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0,
+                3,
+                6,
+                8,
+                10,
+                12,
+                14,
+                16
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "extras" : {
+                "LastPose" : "undefined",
+                "MaxHandle" : 1447
+            },
+            "mesh" : 0,
+            "name" : "Cerberus00_Fixed",
+            "scale" : [
+                0.009999999776482582,
+                0.009999999776482582,
+                0.009999999776482582
+            ],
+            "translation" : [
+                0,
+                0,
+                -0.9372016191482544
+            ]
+        },
+        {
+            "extensions" : {
+                "KHR_lights_punctual" : {
+                    "light" : 0
+                }
+            },
+            "name" : "Sun_Orientation_Orientation",
+            "rotation" : [
+                -0.7071067690849304,
+                0,
+                0,
+                0.7071067690849304
+            ]
+        },
+        {
+            "children" : [
+                1
+            ],
+            "name" : "Sun_Orientation"
+        },
+        {
+            "children" : [
+                2
+            ],
+            "name" : "Sun",
+            "rotation" : [
+                0.2515891492366791,
+                -0.3606495261192322,
+                0.10168104618787766,
+                0.8923541903495789
+            ],
+            "translation" : [
+                -2.886016607284546,
+                3.578587770462036,
+                4.618455410003662
+            ]
+        },
+        {
+            "camera" : 0,
+            "name" : "Camera_Orientation_Orientation",
+            "rotation" : [
+                -0.7071067690849304,
+                0,
+                0,
+                0.7071067690849304
+            ]
+        },
+        {
+            "children" : [
+                4
+            ],
+            "name" : "Camera_Orientation"
+        },
+        {
+            "children" : [
+                5
+            ],
+            "name" : "Camera",
+            "rotation" : [
+                0.24612407386302948,
+                -0.7582738399505615,
+                0.39912086725234985,
+                0.452930748462677
+            ],
+            "translation" : [
+                -2.358323097229004,
+                1.9599876403808594,
+                -1.8041226863861084
+            ]
+        },
+        {
+            "extensions" : {
+                "KHR_lights_punctual" : {
+                    "light" : 1
+                }
+            },
+            "name" : "Point_Orientation",
+            "rotation" : [
+                -0.7071067690849304,
+                0,
+                0,
+                0.7071067690849304
+            ]
+        },
+        {
+            "children" : [
+                7
+            ],
+            "name" : "Point",
+            "translation" : [
+                -0.3737027645111084,
+                0.17625367641448975,
+                -0.029362719506025314
+            ]
+        },
+        {
+            "extensions" : {
+                "KHR_lights_punctual" : {
+                    "light" : 2
+                }
+            },
+            "name" : "Point.001_Orientation",
+            "rotation" : [
+                -0.7071067690849304,
+                0,
+                0,
+                0.7071067690849304
+            ]
+        },
+        {
+            "children" : [
+                9
+            ],
+            "name" : "Point.001",
+            "translation" : [
+                -0.3737027645111084,
+                0.17625367641448975,
+                -0.029362719506025314
+            ]
+        },
+        {
+            "extensions" : {
+                "KHR_lights_punctual" : {
+                    "light" : 3
+                }
+            },
+            "name" : "Point.002_Orientation",
+            "rotation" : [
+                -0.7071067690849304,
+                0,
+                0,
+                0.7071067690849304
+            ]
+        },
+        {
+            "children" : [
+                11
+            ],
+            "name" : "Point.002",
+            "translation" : [
+                -0.3737027645111084,
+                0.17625367641448975,
+                -0.029362719506025314
+            ]
+        },
+        {
+            "extensions" : {
+                "KHR_lights_punctual" : {
+                    "light" : 4
+                }
+            },
+            "name" : "Point.003_Orientation",
+            "rotation" : [
+                -0.7071067690849304,
+                0,
+                0,
+                0.7071067690849304
+            ]
+        },
+        {
+            "children" : [
+                13
+            ],
+            "name" : "Point.003",
+            "translation" : [
+                -0.3737027645111084,
+                0.17625367641448975,
+                -0.029362719506025314
+            ]
+        },
+        {
+            "extensions" : {
+                "KHR_lights_punctual" : {
+                    "light" : 5
+                }
+            },
+            "name" : "Point.004_Orientation",
+            "rotation" : [
+                -0.7071067690849304,
+                0,
+                0,
+                0.7071067690849304
+            ]
+        },
+        {
+            "children" : [
+                15
+            ],
+            "name" : "Point.004",
+            "translation" : [
+                -0.3737027645111084,
+                0.17625367641448975,
+                -0.029362719506025314
+            ]
+        }
+    ],
+    "cameras" : [
+        {
+            "name" : "Camera.001",
+            "perspective" : {
+                "aspectRatio" : 1.7777777777777777,
+                "yfov" : 0.4038851857185364,
+                "zfar" : 1000,
+                "znear" : 0.10000000149011612
+            },
+            "type" : "perspective"
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "emissiveFactor" : [
+                0,
+                0,
+                0
+            ],
+            "name" : "08 - Default",
+            "normalTexture" : {
+                "index" : 0,
+                "texCoord" : 0
+            },
+            "occlusionTexture" : {
+                "index" : 1,
+                "texCoord" : 0
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 2,
+                    "texCoord" : 0
+                },
+                "metallicRoughnessTexture" : {
+                    "index" : 1,
+                    "texCoord" : 0
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Mesh",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TANGENT" : 2,
+                        "TEXCOORD_0" : 3
+                    },
+                    "indices" : 4,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0
+        },
+        {
+            "source" : 1
+        },
+        {
+            "source" : 2
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "name" : "Cerberus_Normal",
+            "uri" : "Textures/Cerberus_Normal.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "Cerberus_AO-Cerberus_Roughness-Cerberus_Metallic",
+            "uri" : "Textures/Cerberus_AO-Cerberus_Roughness-Cerberus_Metallic.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "Cerberus_Albedo",
+            "uri" : "Textures/Cerberus_Albedo.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 30965,
+            "max" : [
+                12.520315170288086,
+                18.77880096435547,
+                130.2689666748047
+            ],
+            "min" : [
+                -19.99312400817871,
+                -47.20871353149414,
+                -25.837120056152344
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 30965,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 30965,
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 30965,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5123,
+            "count" : 100623,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 371580,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 371580,
+            "byteOffset" : 371580
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 495440,
+            "byteOffset" : 743160
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 247720,
+            "byteOffset" : 1238600
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 201246,
+            "byteOffset" : 1486320
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 1687568,
+            "uri" : "CerberusWithPLights.bin"
+        }
+    ]
+}
