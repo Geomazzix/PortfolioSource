@@ -5,13 +5,16 @@ All projects have been built and tested on a Windows device using vs2019 with SD
 
 ## Dataflow: 
 www.tomlemmers.com/ProjectPages/Dataflow.html
+### Note: In order to build make sure to set the "TDGame" project as startup project.
 
 ## Thorium:
 www.tomlemmers.com/ProjectPages/Thorium.html
+### Note: Doesn't run from within the editor, unless the debugging environment is changed to $(OutDir)
 
 ## CPU raytracer:
 www.tomlemmers.com/ProjectPages/CPURaytracer.html
 HDRI maps have been removed due to LFS budget.
+### Note: Creates the image in the project directory when ran from visual studio.
 
 ## Minimal Renderer Proof of Concept:
 www.tomlemmers.com/ProjectPages/MrPoc.html
